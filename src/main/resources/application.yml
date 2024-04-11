@@ -1,0 +1,54 @@
+spring:
+  profiles:
+    active: local
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate.format_sql: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: tp.bmsg@gmail.com
+    password: myqlkmqeyeuipxwh
+    properties:
+      mail:
+        smtp:
+          auth: true
+          timeout: 5000
+          starttls:
+            enable: true
+
+logging:
+  level:
+    org:
+      hiberante:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
+
+jwt:
+  token:
+    header: X-SEUNGGU-AUTH
+    issuer: seunggu
+    client-secret: Rel3Bjce2MajBo09qgkNgYaTuzvJe8iwnBFhsDS5
+    expiry-seconds: 0
+
+
+my-app:
+  admin-email: admin@email.com
+  admin-password: 123456789
+  admin-username: admin
+  user-username: user@email.com
+  user-userPassword: user
+  client-id: myApp
+  client-secret: pass
+server:
+  servlet:
+    encoding:
+      force: true
+      charset: UTF-8
+
+app.host: http://localhost:9232
